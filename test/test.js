@@ -21,6 +21,8 @@ return new Test("DataURIScheme", {
 function test_DataURIScheme_StringToDataURI_success(test, pass, miss) {
     var original = "a𠮟b💩";
     DataURIScheme.StringToDataURI(original, "text/plain", function(err, dataURI){
+        Valid(Valid.type(err, "Error|null"), test_DataURIScheme_StringToDataURI_success, "err");
+        Valid(Valid.type(dataURI, "String"), test_DataURIScheme_StringToDataURI_success, "dataURI");
         if (dataURI === "data:text/plain;charset=utf-8;base64,YfCgrp9i8J+SqQ==") {
             test.done(pass(dataURI));
         }else{
@@ -36,6 +38,8 @@ function test_DataURIScheme_StringToDataURI_failure(test, pass, miss) {
 function test_DataURIScheme_DataURIToString_success(test, pass, miss) {
     var dataURI = "data:text/plain;charset=utf-8;base64,YfCgrp9i8J+SqQ==";
     DataURIScheme.DataURIToString(dataURI, function(err, str){
+        Valid(Valid.type(err, "Error|null"), test_DataURIScheme_DataURIToString_success, "err");
+        Valid(Valid.type(str, "String"), test_DataURIScheme_DataURIToString_success, "str");
         if (str === "a𠮟b💩") {
             test.done(pass(str));
         }else{
@@ -47,6 +51,8 @@ function test_DataURIScheme_DataURIToString_success(test, pass, miss) {
 function test_DataURIScheme_DataURIToString_failure(test, pass, miss) {
     var dataURI = "data:";
     DataURIScheme.DataURIToString(dataURI, function(err, str){
+        Valid(Valid.type(err, "Error|null"), test_DataURIScheme_DataURIToString_failure, "err");
+        Valid(Valid.type(str, "String"), test_DataURIScheme_DataURIToString_failure, "str");
         if (!!err) {
             test.done(pass(err));
         }else{
