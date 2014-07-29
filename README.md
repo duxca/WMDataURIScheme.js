@@ -18,7 +18,7 @@ Data URI scheme converter.
 ```js
 <script src="lib/DataURIScheme.js">
 <script>
-DataURIScheme.StringToDataURI("💩", "type/plain", function(dataURI){
+DataURIScheme.StringToDataURI("💩", "type/plain", function(err, dataURI){
   console.log(dataURI);
 });
 </script>
@@ -29,7 +29,7 @@ DataURIScheme.StringToDataURI("💩", "type/plain", function(dataURI){
 ```js
 importScripts("lib/DataURIScheme.js");
 
-DataURIScheme.StringToDataURI("💩", "type/plain", function(dataURI){
+DataURIScheme.StringToDataURI("💩", "type/plain", function(err, dataURI){
   console.log(dataURI);
 });
 ```

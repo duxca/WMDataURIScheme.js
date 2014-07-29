@@ -12,19 +12,46 @@ return new Test("DataURIScheme", {
         button:     true,
         both:       true, // test the primary module and secondary module
     }).add([
-        testIntegration,
+        test_DataURIScheme_DataURIToString_success,
+        test_DataURIScheme_DataURIToString_failure,
+        test_DataURIScheme_DataURIToString_success,
+        test_DataURIScheme_DataURIToString_failure,
     ]).run().clone();
 
-function testIntegration(test, pass, miss) {
+function test_DataURIScheme_StringToDataURI_success(test, pass, miss) {
     var original = "a𠮟b💩";
-    DataURIScheme.StringToDataURI(original, "text/plain", function(dataURI){
-        DataURIScheme.DataURIToString(dataURI, function(str){
-            if (str === original) {
-                test.done(pass());
-            } else {
-                test.done(miss());
-            }
-        });
+    DataURIScheme.StringToDataURI(original, "text/plain", function(err, dataURI){
+        if (dataURI === "data:text/plain;charset=utf-8;base64,YfCgrp9i8J+SqQ==") {
+            test.done(pass(dataURI));
+        }else{
+            test.done(miss(err));
+        }
+    });
+}
+
+function test_DataURIScheme_StringToDataURI_failure(test, pass, miss) {
+    test.done(pass());
+}
+
+function test_DataURIScheme_DataURIToString_success(test, pass, miss) {
+    var dataURI = "data:text/plain;charset=utf-8;base64,YfCgrp9i8J+SqQ==";
+    DataURIScheme.DataURIToString(dataURI, function(err, str){
+        if (str === "a𠮟b💩") {
+            test.done(pass(str));
+        }else{
+            test.done(miss(err));
+        }
+    });
+}
+
+function test_DataURIScheme_DataURIToString_failure(test, pass, miss) {
+    var dataURI = "data:";
+    DataURIScheme.DataURIToString(dataURI, function(err, str){
+        if (!!err) {
+            test.done(pass(err));
+        }else{
+            test.done(miss(str));
+        }
     });
 }
 

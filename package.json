@@ -1,6 +1,6 @@
 {
   "name":           "legokichi.dataurischeme.js",
-  "version":        "0.0.1",
+  "version":        "1.0.1",
   "description":    "dara URI scheme Converter.",
   "url":            "https://github.com/legokichi/DataURIScheme.js",
   "keywords":       ["legokichi", "WebModule", "Unstable"],
