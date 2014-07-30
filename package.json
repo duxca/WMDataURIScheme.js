@@ -1,6 +1,6 @@
 {
   "name":           "legokichi.dataurischeme.js",
-  "version":        "1.0.2",
+  "version":        "1.0.3",
   "description":    "dara URI scheme Converter.",
   "url":            "https://github.com/legokichi/DataURIScheme.js",
   "keywords":       ["legokichi", "WebModule", "Unstable"],
@@ -13,7 +13,7 @@
     "build":        "node node_modules/uupaa.minify.js --verbose --strict --keep --pretty",
     "build-simple": "node node_modules/uupaa.minify.js --verbose --strict --keep --pretty --nowrap --simple",
     "build-release":"node node_modules/uupaa.minify.js --verbose --strict --module",
-    "test":         "npm run test-node; npm run test-browser; npm run test-sim",
+    "test":         "npm run test-node; npm run test-browser",
     "test-page":    "node node_modules/uupaa.test.js/bin/TestPage.js --verbose",
     "test-debug":   "NODE_ENV=production NODE_PATH=lib node --debug-brk --harmony test/index.node.js",
     "test-node":    "NODE_ENV=production NODE_PATH=lib node --harmony test/index.node.js",
@@ -27,10 +27,7 @@
   "x-build": {
     "source":       ["lib/DataURIScheme.js"],
     "output":       "release/DataURIScheme.min.js",
-    "target":       [
-      "Browser",
-      "Worker"
-    ],
+    "target":       ["Browser", "Worker"],
     "label":        ["@dev"],
     "module": {
       "develop":    ["uupaa.valid.js"],

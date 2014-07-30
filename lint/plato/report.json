@@ -15,49 +15,49 @@
           "line": 1,
           "complexity": {
             "sloc": {
-              "physical": 93,
-              "logical": 50
+              "physical": 94,
+              "logical": 49
             },
             "cyclomatic": 8,
             "halstead": {
               "operators": {
                 "distinct": 19,
-                "total": 155,
+                "total": 145,
                 "identifiers": [
                   "__stripped__"
                 ]
               },
               "operands": {
-                "distinct": 75,
-                "total": 210,
+                "distinct": 70,
+                "total": 187,
                 "identifiers": [
                   "__stripped__"
                 ]
               },
-              "length": 365,
-              "vocabulary": 94,
-              "difficulty": 26.599999999999998,
-              "volume": 2392.4249308623375,
-              "effort": 63638.50316093818,
-              "bugs": 0.7974749769541125,
-              "time": 3535.472397829899
+              "length": 332,
+              "vocabulary": 89,
+              "difficulty": 25.378571428571426,
+              "volume": 2149.943499080844,
+              "effort": 54562.49465881599,
+              "bugs": 0.716647833026948,
+              "time": 3031.2497032675547
             },
-            "params": 8
+            "params": 10
           }
         },
         "module": "lib/DataURIScheme.js",
-        "maintainability": 68.92641866187269
+        "maintainability": 69.67555661934111
       }
     }
   ],
   "summary": {
     "total": {
-      "sloc": 93,
-      "maintainability": 68.92641866187269
+      "sloc": 94,
+      "maintainability": 69.67555661934111
     },
     "average": {
-      "sloc": 93,
-      "maintainability": "68.93"
+      "sloc": 94,
+      "maintainability": "69.68"
     }
   }
 }
