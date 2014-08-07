@@ -16,7 +16,7 @@ Data URI scheme converter.
 ### Browser
 
 ```js
-<script src="lib/DataURIScheme.js">
+<script src="lib/DataURIScheme.js"></script>
 <script>
 DataURIScheme.StringToDataURI("💩", "type/plain", function(err, dataURI){
   console.log(dataURI);
