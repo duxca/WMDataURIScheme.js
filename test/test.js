@@ -4,6 +4,8 @@ var _runOnNode = "process" in global;
 var _runOnWorker = "WorkerLocation" in global;
 var _runOnBrowser = "document" in global;
 
+var DataURIScheme = WMDataURIScheme;
+
 return new Test("DataURIScheme", {
         disable:    false,
         browser:    true,

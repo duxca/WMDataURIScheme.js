@@ -2,10 +2,10 @@ __report = {
   "reports": [
     {
       "info": {
-        "file": "lib/DataURIScheme.js",
-        "fileShort": "lib/DataURIScheme.js",
-        "fileSafe": "lib_DataURIScheme_js",
-        "link": "files/lib_DataURIScheme_js/index.html"
+        "file": "lib/WMDataURIScheme.js",
+        "fileShort": "lib/WMDataURIScheme.js",
+        "fileSafe": "lib_WMDataURIScheme_js",
+        "link": "files/lib_WMDataURIScheme_js/index.html"
       },
       "jshint": {
         "messages": 0
@@ -45,7 +45,7 @@ __report = {
             "params": 10
           }
         },
-        "module": "lib/DataURIScheme.js",
+        "module": "lib/WMDataURIScheme.js",
         "maintainability": 69.67555661934111
       }
     }

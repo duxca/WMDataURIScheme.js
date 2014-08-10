@@ -1,12 +1,12 @@
-# DataURIScheme.js [![Build Status](https://api.travis-ci.org/legokichi/DataURIScheme.js.png)](http://travis-ci.org/legokichi/DataURIScheme.js)
+# WMDataURIScheme.js [![Build Status](https://api.travis-ci.org/legokichi/WMDataURIScheme.js.png)](http://travis-ci.org/legokichi/WMDataURIScheme.js)
 
-[![npm](https://nodei.co/npm/legokichi.dataurischeme.js.png?downloads=true&stars=true)](https://nodei.co/npm/legokichi.dataurischeme.js/)
+[![npm](https://nodei.co/npm/legokichi.wmdataurischeme.js.png?downloads=true&stars=true)](https://nodei.co/npm/legokichi.wmdataurischeme.js/)
 
 Data URI scheme converter.
 
 ## Document
 
-- [DataURIScheme.js wiki](https://github.com/legokichi/DataURIScheme.js/wiki/DataURIScheme)
+- [WMDataURIScheme.js wiki](https://github.com/legokichi/WMDataURIScheme.js/wiki/WMDataURIScheme)
 - [Development](https://github.com/uupaa/WebModule/wiki/Development)
 - [WebModule](https://github.com/uupaa/WebModule) ([Slide](http://uupaa.github.io/Slide/slide/WebModule/index.html))
 
@@ -16,9 +16,9 @@ Data URI scheme converter.
 ### Browser
 
 ```js
-<script src="lib/DataURIScheme.js"></script>
+<script src="lib/WMDataURIScheme.js"></script>
 <script>
-DataURIScheme.StringToDataURI("💩", "type/plain", function(err, dataURI){
+WMDataURIScheme.StringToDataURI("💩", "type/plain", function(err, dataURI){
   console.log(dataURI);
 });
 </script>
@@ -27,9 +27,9 @@ DataURIScheme.StringToDataURI("💩", "type/plain", function(err, dataURI){
 ### WebWorkers
 
 ```js
-importScripts("lib/DataURIScheme.js");
+importScripts("lib/WMDataURIScheme.js");
 
-DataURIScheme.StringToDataURI("💩", "type/plain", function(err, dataURI){
+WMDataURIScheme.StringToDataURI("💩", "type/plain", function(err, dataURI){
   console.log(dataURI);
 });
 ```
