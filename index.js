@@ -1,3 +1,3 @@
-//module.exports = require("./bin/DataURIScheme");
-module.exports = require("./lib/DataURIScheme");
+//module.exports = require("./bin/WMDataURIScheme");
+module.exports = require("./lib/WMDataURIScheme");
 

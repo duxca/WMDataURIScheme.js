@@ -1,14 +1,15 @@
 {
-  "name":           "legokichi.wmdataurischeme.js",
-  "version":        "1.1.0",
+  "name":           "duxca.wmdataurischeme.js",
+  "version":        "1.2.0",
   "description":    "dara URI scheme Converter.",
-  "url":            "https://github.com/legokichi/WMDataURIScheme.js",
-  "keywords":       ["legokichi", "WebModule", "Unstable"],
+  "url":            "https://github.com/duxca/WMDataURIScheme.js",
+  "keywords":       ["duxca", "WebModule", "Unstable"],
   "repository": {
     "type":         "git",
-    "url":          "https://github.com/legokichi/WMDataURIScheme.js.git"
+    "url":          "https://github.com/duxca/WMDataURIScheme.js.git"
   },
   "scripts": {
+    "init":         "npm update; npm run build; npm run test-page",
     "watch":        "node node_modules/uupaa.watch.js --verbose --action build",
     "build":        "node node_modules/uupaa.minify.js --verbose --strict --keep --pretty",
     "build-simple": "node node_modules/uupaa.minify.js --verbose --strict --keep --pretty --nowrap --simple",
@@ -22,7 +23,10 @@
     "server":       "http-server -c-1 -p 8585 &",
     "server-stop":  "",
     "server-kill":  "killall -- node /usr/local/bin/http-server -p 8585 ; exit 0",
-    "lint":         "node node_modules/uupaa.plato.js; open lint/plato/index.html"
+    "patch":        "node node_modules/uupaa.webmoduleutility.js/index.js --patched",
+    "hint":         "jshint lib/*.js",
+    "lint":         "npm run coverage",
+    "coverage":     "node node_modules/uupaa.plato.js; open lint/plato/index.html"
   },
   "x-build": {
     "source":       ["lib/WMDataURIScheme.js"],
@@ -47,11 +51,12 @@
     "uupaa.test.js":    "",
     "uupaa.watch.js":   "",
     "uupaa.plato.js":   "",
-    "uupaa.minify.js":  ""
+    "uupaa.minify.js":  "",
+    "uupaa.webmoduleutility.js": ""
   },
   "lib":            "./lib/",
   "main":           "./index.js",
-  "author":         "legokichi <legokichi@gmail.com>",
+  "author":         "duxca",
   "license":        "MIT",
   "contributors":   []
 }
