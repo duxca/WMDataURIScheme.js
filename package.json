@@ -1,6 +1,6 @@
 {
   "name":           "duxca.wmdataurischeme.js",
-  "version":        "1.2.0",
+  "version":        "1.2.1",
   "description":    "dara URI scheme Converter.",
   "url":            "https://github.com/duxca/WMDataURIScheme.js",
   "keywords":       ["duxca", "WebModule", "Unstable"],
